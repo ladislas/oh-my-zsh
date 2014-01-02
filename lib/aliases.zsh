@@ -1,3 +1,10 @@
+# List direcory contents
+export LS_OPTIONS='--color'
+alias l='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -lh'
+alias lll='ls $LS_OPTIONS -alh'
+alias sl='ls $LS_OPTIONS' # often screw this up
+
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
