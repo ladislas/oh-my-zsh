@@ -56,7 +56,11 @@ export HOMEBREW_GITHUB_API_TOKEN=52c4870a7c68db699d449f6ba4d70833fa2d98af
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # GCC ARM Stuff
+<<<<<<< HEAD
 PATH="$HOME/dev/tools/arm-gcc_48/bin:$PATH"
+=======
+PATH="$HOME/dev/tools/arm-gcc/bin:$PATH"
+>>>>>>> 2abca8d80f56b178f2e28a86a6433089daa8baff
 
 # Cabal
 PATH="/Users/Ladislas/.cabal/bin:$PATH"
@@ -64,10 +68,13 @@ PATH="/Users/Ladislas/.cabal/bin:$PATH"
 # Cask stuff
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+<<<<<<< HEAD
 # Go stuff
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
+=======
+>>>>>>> 2abca8d80f56b178f2e28a86a6433089daa8baff
 # Perl Stuff
 # export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
 # export PERL_MB_OPT="--install_base /Users/Ladislas/perl5";
