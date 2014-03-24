@@ -3,6 +3,12 @@ locals.zsh
 .DS_Store
 log/.zsh_history
 projects.zsh
+<<<<<<< HEAD
+=======
+custom
+!custom/plugins/example
+!custom/example.zsh
+>>>>>>> ffc17b6b4d55f74b9d3786ba790b7340865e5014
 *.swp
 !custom/example.zshcache
 cache/
