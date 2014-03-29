@@ -44,7 +44,7 @@ alias iterm="open /Applications/iTerm.app"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to the command execution time stamp shown 
+# Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
@@ -68,7 +68,15 @@ export TERM=xterm-256color
 export HOMEBREW_GITHUB_API_TOKEN=52c4870a7c68db699d449f6ba4d70833fa2d98af
 
 # Brew stuff
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+if [[ $OSTYPE == "darwin13.0" ]]; then
+	echo "Hi Surfer!"
+	PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+elif [[ $OSTYPE == "darwin13.0" ]]; then
+	echo "Hi Hacker!"
+	export PATH="$HOME/.linuxbrew/bin:$PATH"
+	export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+fi
+
 
 # GCC ARM Stuff
 PATH="$HOME/dev/tools/arm-gcc_48/bin:$PATH"
