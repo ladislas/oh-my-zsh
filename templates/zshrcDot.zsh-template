@@ -77,6 +77,8 @@ elif [[ $OSTYPE == "darwin13.0" ]]; then
 	export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
+# Ruby Stuff
+eval "$(rbenv init -)"
 
 # GCC ARM Stuff
 PATH="$HOME/dev/tools/arm-gcc_48/bin:$PATH"
