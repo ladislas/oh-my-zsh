@@ -16,6 +16,7 @@ ZSH_THEME="john"
 alias zshconf="vim ~/.zshrc"
 alias ohmyconf="vim ~/.oh-my-zsh"
 alias iterm="open /Applications/iTerm.app"
+alias now="ssh ladislas@leka.cloudapp.net"
 
 # Set this to use case-sensitive completion
 # CASE_SENSITIVE="true"
