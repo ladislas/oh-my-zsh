@@ -104,6 +104,7 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 fi
 
 # Ruby Stuff
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Export Path
