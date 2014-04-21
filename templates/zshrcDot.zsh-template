@@ -78,6 +78,9 @@ elif [[ $OSTYPE == "darwin13.0" ]]; then
 	export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
+# Node Version Manager Stuff
+source $(brew --prefix nvm)/nvm.sh
+
 # Ruby Stuff
 eval "$(rbenv init -)"
 
