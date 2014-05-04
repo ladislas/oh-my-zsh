@@ -61,6 +61,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Set Extended Glob
+setopt extended_glob
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -87,6 +90,13 @@ if [[ $OSTYPE == "darwin13.0" ]]; then
 	# Cabal
 	PATH="/Users/Ladislas/.cabal/bin:$PATH"
 
+	# Rubyt Stuff
+	export RBENV_ROOT=/usr/local/var/rbenv
+	if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+	# LaTex Stuff
+	PATH=/usr/texbin:$PATH
+
 	# Perl Stuff
 	export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
 	export PERL_MB_OPT="--install_base /Users/Ladislas/perl5";
@@ -101,11 +111,11 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 	#Node Version Manager Stuff
 	source ~/.nvm/nvm.sh
 
-fi
+	# Ruby Stuff
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
 
-# Ruby Stuff
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+fi
 
 # Export Path
 export PATH
