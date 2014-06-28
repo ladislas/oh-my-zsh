@@ -12,12 +12,6 @@ ZSH_THEME="john"
 # ZSH_THEME="fox"
 # ZSH_THEME="af-magic"
 
-# Example aliases
-alias zshconf="vim ~/.zshrc"
-alias ohmyconf="vim ~/.oh-my-zsh"
-alias iterm="open /Applications/iTerm.app"
-alias now="ssh ladislas@leka.cloudapp.net"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -61,6 +55,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Example aliases
+alias zshconf="vim ~/.zshrc"
+alias ohmyconf="vim ~/.oh-my-zsh"
+alias iterm="open /Applications/iTerm.app"
+alias now="ssh ladislas@leka.cloudapp.net"
+alias ll='ls -lh --group-directories-first'
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -81,11 +82,14 @@ if [[ $OSTYPE == "darwin13.0" ]]; then
 	# Node Version Manager Stuff
 	source $(brew --prefix nvm)/nvm.sh
 
-	# Cask stuff
+	# Cask Stuff
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-	# Cabal
+	# Cabal Stuff
 	PATH="/Users/Ladislas/.cabal/bin:$PATH"
+	
+	# Latex Stuff
+	PATH="/usr/texbin:$PATH"
 
 	# Perl Stuff
 	export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
