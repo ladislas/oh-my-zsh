@@ -49,7 +49,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting)
+plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,7 +69,7 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
 # OS dependent configurations
-if [[ $OSTYPE == "darwin13.0" ]]; then
+if [[ $OSTYPE == "darwin13.0.0" ]]; then
 
 	echo "Hi Surfer!"
 
@@ -93,7 +93,7 @@ if [[ $OSTYPE == "darwin13.0" ]]; then
 
 	# Rubyt Stuff
 	export RBENV_ROOT=/usr/local/var/rbenv
-	if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+	if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 	# LaTex Stuff
 	PATH=/usr/texbin:$PATH
@@ -122,7 +122,7 @@ fi
 export PATH
 
 # Color listing
-eval $(dircolors $HOME/.dir_colors)
+eval $(dircolors -b $HOME/.oh-my-zsh/custom/colors/LS_COLORS/LS_COLORS)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id
