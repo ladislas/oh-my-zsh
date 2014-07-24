@@ -6,4 +6,4 @@
 	url = https://github.com/trapd00r/zsh-syntax-highlighting-filetypes
 [submodule "custom/colors/LS_COLORS"]
 	path = custom/colors/LS_COLORS
-	url = https://github.com/trapd00r/LS_COLORS
+	url = https://github.com/ladislas/LS_COLORS
