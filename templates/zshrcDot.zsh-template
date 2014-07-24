@@ -49,7 +49,8 @@ HIST_STAMPS="dd/mm/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes zsh-syntax-highlighting)
+# plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes zsh-syntax-highlighting)
+plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,7 +70,8 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
 # OS dependent configurations
-if [[ $OSTYPE == "darwin13.0.0" ]]; then
+# if [[ $OSTYPE == "darwin13.0.0" || $OSTYPE == "darwin13.0" ]]; then
+if [[ $OSTYPE =~ "darwin" ]]; then
 
 	echo "Hi Surfer!"
 
@@ -80,6 +82,7 @@ if [[ $OSTYPE == "darwin13.0.0" ]]; then
 	PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 	# Node Version Manager Stuff
+	export NVM_DIR=~/.nvm
 	source $(brew --prefix nvm)/nvm.sh
 
 	# Cask Stuff
