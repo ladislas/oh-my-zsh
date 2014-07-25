@@ -3,7 +3,7 @@
 	url = https://github.com/zsh-users/zsh-syntax-highlighting/
 [submodule "custom/plugins/zsh-syntax-highlighting-filetypes"]
 	path = custom/plugins/zsh-syntax-highlighting-filetypes
-	url = https://github.com/trapd00r/zsh-syntax-highlighting-filetypes
+	url = https://github.com/ladislas/zsh-syntax-highlighting-filetypes
 [submodule "custom/colors/LS_COLORS"]
 	path = custom/colors/LS_COLORS
 	url = https://github.com/ladislas/LS_COLORS
