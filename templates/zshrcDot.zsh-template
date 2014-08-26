@@ -61,7 +61,7 @@ alias zshconf="vim ~/.zshrc"
 alias ohmyconf="vim ~/.oh-my-zsh"
 alias iterm="open /Applications/iTerm.app"
 alias now="ssh ladislas@leka.cloudapp.net"
-alias ll='ls -lh --group-directories-first'
+alias ll="ls -lh --group-directories-first"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -83,30 +83,27 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 
 	# Node Version Manager Stuff
 	export NVM_DIR=~/.nvm
-	source $(brew --prefix nvm)/nvm.sh
+	if which nvm > /dev/null; then source "$(brew --prefix nvm)/nvm.shi"; fi
 
 	# Cask Stuff
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-	# Cabal Stuff
-	PATH="/Users/Ladislas/.cabal/bin:$PATH"
-	
-	# Latex Stuff
-	PATH="/usr/texbin:$PATH"
+	# MacTex Stuff
+	# eval "$(/usr/libexec/path_helper -s)"
 
 	# Rubyt Stuff
 	export RBENV_ROOT=/usr/local/var/rbenv
 	if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-	# LaTex Stuff
-	PATH=/usr/texbin:$PATH
+	# Python Stuff
+	if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 	# Perl Stuff
-	export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
-	export PERL_MB_OPT="--install_base /Users/Ladislas/perl5";
-	export PERL_MM_OPT="INSTALL_BASE=/Users/Ladislas/perl5";
-	export PERL5LIB="/Users/Ladislas/perl5/lib/perl5:$PERL5LIB";
-	PATH="/Users/Ladislas/perl5/bin:$PATH";
+	# export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
+	# export PERL_MB_OPT="--install_base /Users/Ladislas/perl5";
+	# export PERL_MM_OPT="INSTALL_BASE=/Users/Ladislas/perl5";
+	# export PERL5LIB="/Users/Ladislas/perl5/lib/perl5:$PERL5LIB";
+	# PATH="/Users/Ladislas/perl5/bin:$PATH";
 
 elif [[ $OSTYPE == "linux-gnu" ]]; then
 
@@ -126,6 +123,7 @@ export PATH
 
 # Color listing
 eval $(dircolors -b $HOME/.oh-my-zsh/custom/colors/LS_COLORS/LS_COLORS)
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id
+# export SSH_KEY_PATH"~/.ssh/dsa_id
