@@ -63,6 +63,8 @@ alias iterm="open /Applications/iTerm.app"
 alias now="ssh ladislas@leka.cloudapp.net"
 alias ll="ls -lh --group-directories-first"
 
+# Export $EDITOR
+export EDITOR=vim
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -83,7 +85,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 
 	# Node Version Manager Stuff
 	export NVM_DIR=~/.nvm
-	if which nvm > /dev/null; then source "$(brew --prefix nvm)/nvm.shi"; fi
+	if brew ls --version nvm > /dev/null; then source "$(brew --prefix nvm)/nvm.sh"; fi
 
 	# Cask Stuff
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
