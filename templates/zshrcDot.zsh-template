@@ -16,7 +16,7 @@ ZSH_THEME="john"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -50,7 +50,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes zsh-syntax-highlighting)
-plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes)
+plugins=(common-aliases git osx brew brew-cask bower nvm node npm rbenv colorize zsh-syntax-highlighting-filetypes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,6 +76,9 @@ export TERM=xterm-256color
 if [[ $OSTYPE =~ "darwin" ]]; then
 
 	echo "Hi Surfer!"
+
+	# Path with sbin
+	PATH="/usr/local/sbin:$PATH"
 
 	# Github Token for Homebrew
 	export HOMEBREW_GITHUB_API_TOKEN=52c4870a7c68db699d449f6ba4d70833fa2d98af
@@ -115,7 +118,7 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 	source ~/.nvm/nvm.sh
 
 	# Ruby Stuff
-	export PATH="$HOME/.rbenv/bin:$PATH"
+	PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"
 
 fi
