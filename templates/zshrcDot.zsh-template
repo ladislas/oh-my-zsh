@@ -103,6 +103,9 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 	# Python Stuff
 	if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+	# Gruvbox color palette
+	~/.nvim/plugged/gruvbox/gruvbox_256palette_osx.sh
+
 	# Perl Stuff
 	# export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
 	# export PERL_MB_OPT="--install_base /Users/Ladislas/perl5";
