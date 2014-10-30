@@ -88,7 +88,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 
 	# Node Version Manager Stuff
 	export NVM_DIR=~/.nvm
-	if brew ls --version nvm > /dev/null; then source "$(brew --prefix nvm)/nvm.sh"; fi
+	if brew ls --version nvm &> /dev/null; then source "$(brew --prefix nvm)/nvm.sh"; fi
 
 	# Cask Stuff
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
