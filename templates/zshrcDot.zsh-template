@@ -88,7 +88,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 
 	# Node Version Manager Stuff
 	export NVM_DIR=~/.nvm
-	if brew ls --version nvm &> /dev/null; then source "$(brew --prefix nvm)/nvm.sh"; fi
+	if brew ls --version nvm &> /dev/null && ls ~/.nvm &> /dev/null ; then source "$(brew --prefix nvm)/nvm.sh"; fi
 
 	# Cask Stuff
 	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -98,13 +98,13 @@ if [[ $OSTYPE =~ "darwin" ]]; then
 
 	# Rubyt Stuff
 	export RBENV_ROOT=/usr/local/var/rbenv
-	if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+	if which rbenv &> /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 	# Python Stuff
-	if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+	if which pyenv &> /dev/null; then eval "$(pyenv init -)"; fi
 
 	# Gruvbox color palette
-	if ls ~/.nvim/plugged/gruvbox/gruvbox_256palette_osx.sh &> /dev/null; then ~/.nvim/plugged/gruvbox/gruvbox_256palette_osx.sh; fi
+	if ls ~/.nvim/plugged/gruvbox/gruvbox_256palette_osx.sh &> /dev/null ; then ~/.nvim/plugged/gruvbox/gruvbox_256palette_osx.sh; fi
 
 	# Perl Stuff
 	# export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/Ladislas/perl5";
