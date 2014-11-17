@@ -56,15 +56,14 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Export $EDITOR
+if nvim --version &> /dev/null ; then export EDITOR="nvim" ; fi
+
 # Example aliases
-alias zshconf="vim ~/.zshrc"
-alias ohmyconf="vim ~/.oh-my-zsh"
 alias iterm="open /Applications/iTerm.app"
 alias now="ssh ladislas@leka.cloudapp.net"
 alias ll="ls -lh --group-directories-first"
 
-# Export $EDITOR
-export EDITOR=vim
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -72,7 +71,6 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
 # OS dependent configurations
-# if [[ $OSTYPE == "darwin13.0.0" || $OSTYPE == "darwin13.0" ]]; then
 if [[ $OSTYPE =~ "darwin" ]]; then
 
 	echo "Hi Surfer!"
