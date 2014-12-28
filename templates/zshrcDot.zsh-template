@@ -47,7 +47,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(common-aliases git osx brew brew-cask bower node npm nvm rbenv colorize zsh-syntax-highlighting-filetypes zsh-syntax-highlighting)
-plugins=(common-aliases git osx brew brew-cask bower nvm node rbenv colorize zsh-syntax-highlighting-filetypes)
+plugins=(common-aliases git osx brew brew-cask hub nvm node rbenv colorize zsh-syntax-highlighting-filetypes)
 
 source $ZSH/oh-my-zsh.sh
 
