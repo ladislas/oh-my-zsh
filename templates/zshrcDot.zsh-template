@@ -111,6 +111,7 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 
 	# Linuxbrew
 	export PATH="$HOME/.linuxbrew/bin:$PATH"
+	export PATH="/home/ladislas/.linuxbrew/sbin:$PATH"
 	export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 	export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
@@ -119,7 +120,8 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 
 	# Ruby Stuff
 	PATH="$HOME/.rbenv/bin:$PATH"
-	eval "$(rbenv init -)"
+	export RBENV_ROOT=/usr/local/var/rbenv
+	if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 fi
 
