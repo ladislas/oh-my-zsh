@@ -60,6 +60,7 @@ if nvim --version &> /dev/null ; then export EDITOR="nvim" ; fi
 alias iterm="open /Applications/iTerm.app"
 alias now="ssh ladislas@leka.cloudapp.net"
 alias ll="ls -lh --group-directories-first"
+alias :q="exit"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
