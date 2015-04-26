@@ -116,6 +116,9 @@ elif [[ $OSTYPE == "linux-gnu" ]]; then
 	export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 	export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
+	# Pandoc
+	export PATH="$HOME/.cabal/bin:$PATH"
+
 	#Node Version Manager Stuff
 	source ~/.nvm/nvm.sh
 
