@@ -64,7 +64,6 @@ if nvim --version &> /dev/null ; then export EDITOR="nvim" ; else export EDITOR=
 # Useful aliases
 alias iterm="open /Applications/iTerm.app"
 alias now="ssh ladislas@leka.cloudapp.net"
-echo $(which ls)
 alias ll="ls -lh --group-directories-first"
 alias :q="exit"
 
