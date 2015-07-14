@@ -16,10 +16,10 @@ local current_dir='${PWD/#$HOME/~}'
 
 # Git info.
 local git_info='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}± %{$reset_color%}%{$fg[green]%}|"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}±%{$reset_color%}%{$fg[green]%}|"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}%{$fg[green]%}| "
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✓|%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}%{$fg[green]%}| "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓|%{$reset_color%} "
 
 # Prompt format: \n # USER in DIRECTORY on git:BRANCH STATE \n $
 PROMPT="
@@ -27,6 +27,5 @@ PROMPT="
 %{$fg[cyan]%}%n%{$reset_color%}% \
 %{$fg_bold[grey]%} @%{$fg_bold[grey]%}%M%{$reset_color%}% \
 %{$fg[white]%} in \
-%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}
-${git_info}\
-%{$fg[green]%}→ %{$reset_color%}"
+%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%} ${git_info}
+%{$fg[green]%}→%{$reset_color%}"
