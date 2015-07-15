@@ -40,7 +40,7 @@ git_remote_status() {
         then
             git_remote_status="$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE"
             git_remote_status_detailed="$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR$ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE$((ahead))%{$reset_color%}"
-        elif [ $behind -gt 0 ] && [ $ahead -eq 0 ] 
+        elif [ $behind -gt 0 ] && [ $ahead -eq 0 ]
         then
             git_remote_status="$ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE"
             git_remote_status_detailed="$ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR$ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE$((behind))%{$reset_color%}"
@@ -143,6 +143,9 @@ git_prompt_status() {
   fi
   if $(echo "$INDEX" | grep '^## .*diverged' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
+  fi
+  if [[ ! -z $STATUS ]] ; then
+    STATUS="$ZSH_THEME_GIT_STATUS_PREFIX$STATUS$ZSH_THEME_GIT_STATUS_SUFFIX"
   fi
   echo $STATUS
 }
